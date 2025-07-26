@@ -17,7 +17,7 @@ const title = formdata.get('title');
 const content = formdata.get('content');
 const url = formdata.get('url');
 
-    const data = await prisma.BlogPost.create ({
+    const data = await prisma.blogPost.create ({
         data: {
             title: title,
             content: content,
