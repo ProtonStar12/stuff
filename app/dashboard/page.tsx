@@ -23,6 +23,17 @@ async function getData(UserId: string) {
 export default async function  Dashboard() {
     const { getUser } = getKindeServerSession();
     const user = await getUser();
+
+  if (!user) {
+    // Redirect to login or show fallback content
+    return (
+      <div className="text-center mt-10">
+        <h2 className="text-xl font-semibold">Please sign in to view your dashboard.</h2>
+        <Link href="/" className={buttonVariants({ variant: "outline" })}>Go Home</Link>
+      </div>
+    );
+  }
+
     const data = await getData(user.id);
     return (
             <div>
