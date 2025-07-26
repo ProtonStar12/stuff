@@ -6,7 +6,7 @@ import { prisma } from "../utils/db";
 import { BlogPostCard } from "@/components/general/Blogpost";
 
 async function getData(UserId: string) {
-    const data = await prisma.BlogPost.findMany({
+    const data = await prisma.blogPost.findMany({
         where: {
             authorId: UserId,
 
