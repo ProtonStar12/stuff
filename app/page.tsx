@@ -20,6 +20,7 @@ async function getData(){
       authorImageUrl: true,
       id: true,
       createdAt: true,
+      updatedAt: true,
     },
   });
   return data;
