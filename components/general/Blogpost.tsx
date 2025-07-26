@@ -11,8 +11,8 @@ interface IappProps {
     authorId: string;
     authorName: string;
     authorImageUrl: string;
-    createdAt: string;
-    updatedAt: string;
+    createdAt: Date;
+    updatedAt: Date;
    }
 }
 export function BlogPostCard({ data }: IappProps) {
